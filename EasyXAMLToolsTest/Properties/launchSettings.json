@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "EasyXAMLTools (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "EasyXAMLTools (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
