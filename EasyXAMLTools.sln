@@ -5,9 +5,9 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyXAMLToolsTest", "EasyXAMLToolsTest\EasyXAMLToolsTest.csproj", "{74295194-086C-4935-B672-31C89629913A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCSharp.Generator", "..\EasyCSharp\EasyCSharp\EasyCSharp.Generator.csproj", "{C2DAC0F3-10F1-4422-84EF-F1F15CA85476}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCSharp.Generator", "EasyCSharp\EasyCSharp\EasyCSharp.Generator.csproj", "{C2DAC0F3-10F1-4422-84EF-F1F15CA85476}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCSharp", "..\EasyCSharp\EasyCSharp.Types\EasyCSharp.csproj", "{7EB07357-02B6-466A-B466-ED7C1298DA6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCSharp", "EasyCSharp\EasyCSharp.Types\EasyCSharp.csproj", "{7EB07357-02B6-466A-B466-ED7C1298DA6C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyXAMLTools.Generator", "EasyXAMLTools.Generator\EasyXAMLTools.Generator.csproj", "{F432CAFE-6AB0-436B-A1E3-77DD9AF76352}"
 EndProject
