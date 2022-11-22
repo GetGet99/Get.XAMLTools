@@ -1,0 +1,6 @@
+[submodule "WinWrapper"]
+	path = WinWrapper
+	url = https://github.com/Get0457/WinWrapper
+[submodule "EasyCSharp"]
+	path = EasyCSharp
+	url = https://github.com/Get0457/EasyCSharp
