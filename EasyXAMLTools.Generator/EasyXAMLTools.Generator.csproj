@@ -5,16 +5,16 @@
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 	<ItemGroup>
-		<Compile Include="..\..\EasyCSharp\EasyCSharp.Types\PropertyAttribute.cs" Link="PropertyAttribute.cs" />
-		<Compile Include="..\..\EasyCSharp\EasyCSharp\Extension.cs" Link="Extension.cs" />
-		<Compile Include="..\..\EasyCSharp\EasyCSharp\GeneratorBase.cs" Link="GeneratorBase.cs" />
-		<Compile Include="..\..\EasyCSharp\EasyCSharp\PropertyGenerator.cs" Link="PropertyGenerator.cs" />
-		<Compile Include="..\..\EasyCSharp\EasyCSharp\SyntaxReceiver.cs" Link="SyntaxReceiver.cs" />
+		<Compile Include="..\EasyCSharp\EasyCSharp\PropertyAttribute.cs" Link="PropertyAttribute.cs" />
+		<Compile Include="..\EasyCSharp\EasyCSharp.Generator\Extension.cs" Link="Extension.cs" />
+		<Compile Include="..\EasyCSharp\EasyCSharp.Generator\GeneratorBase.cs" Link="GeneratorBase.cs" />
+		<Compile Include="..\EasyCSharp\EasyCSharp.Generator\PropertyGenerator.cs" Link="PropertyGenerator.cs" />
+		<Compile Include="..\EasyCSharp\EasyCSharp.Generator\SyntaxReceiver.cs" Link="SyntaxReceiver.cs" />
 		<Compile Include="..\EasyXAMLTools\DependencyPropertyAttribute.cs" Link="DependencyPropertyAttribute.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.3.0" PrivateAssets="all" />
 		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3" PrivateAssets="all" />
-		<ProjectReference Include="..\..\EasyCSharp\EasyCSharp\EasyCSharp.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+		<ProjectReference Include="..\EasyCSharp\EasyCSharp\EasyCSharp.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
 	</ItemGroup>
 </Project>
