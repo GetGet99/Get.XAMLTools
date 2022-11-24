@@ -1,7 +1,7 @@
 ﻿using EasyCSharp;
 
 namespace EasyXAMLTools;
-public class DependencyPropertyAttribute : PropertyAttribute
+class DependencyPropertyAttribute : PropertyAttribute
 {
     
 }
