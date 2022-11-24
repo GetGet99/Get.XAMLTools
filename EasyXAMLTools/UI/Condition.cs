@@ -14,7 +14,11 @@ public partial class Condition : ContentControl
     /// <summary>
     /// Set Value of the condition and update the template
     /// </summary>
-    [NullablePropertyWrapper(PropertyName = "ValueNullable", OnChanged = nameof(UpdateTemplate))]
+    [AutoNotifyProperty(PropertyName = "ValueNullable",
+        CustomType = typeof(bool?),
+        CustomGetExpression = $"(bool?){nameof(ValueNullable)}",
+        CustomSetExpression = $"value ?? false",
+        OnChanged = nameof(UpdateTemplate))]
     [AutoNotifyProperty(OnChanged = nameof(UpdateTemplate))]
     bool _Value = false;
 
