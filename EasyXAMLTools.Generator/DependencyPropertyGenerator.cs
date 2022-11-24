@@ -1,19 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.CodeAnalysis.Text;
+﻿using CopySourceGenerator;
 using EasyCSharp;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 namespace EasyXAMLTools;
-
+[CopySource("DependencyPropertyAttributeSource", typeof(DependencyPropertyAttribute))]
 [Generator]
-public class DependencyPropertyGenerator : PropertyGenerator
+public partial class DependencyPropertyGenerator : PropertyGeneratorBase
 {
+    protected override void OnInitialize(GeneratorInitializationContext context)
+    {
+        context.RegisterForPostInitialization(
+            x => x.AddSource($"{typeof(DependencyPropertyAttribute)}.g.cs", DependencyPropertyAttributeSource)
+        );
+    }
+
     const string DependencyObjectNS = "Microsoft.UI.Xaml.DependencyObject";
     const string DependencyPropertyNS = "Microsoft.UI.Xaml.DependencyProperty";
     const string PropertyMetadataNS = "Microsoft.UI.Xaml.PropertyMetadata";

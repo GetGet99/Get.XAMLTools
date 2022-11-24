@@ -1,7 +1,6 @@
-﻿using System;
-using System.Diagnostics;
+﻿using EasyCSharp;
+
 namespace EasyXAMLTools;
-using EasyCSharp;
 public class DependencyPropertyAttribute : PropertyAttribute
 {
     
