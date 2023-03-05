@@ -48,7 +48,7 @@ public class EzRelativeStackPanel : Panel
             var totalRS = childrenAndRS.Sum(x => x.RelativeSize);
             var ChildrenCount = Children.Count;
             var finalOrientedSize = ToOrientedSize(finalSize);
-            var Multipier = finalOrientedSize.Adaptive / ChildrenCount;
+            var Multipier = finalOrientedSize.Adaptive / totalRS;
             foreach (var (child, RelativeSize) in childrenAndRS)
             {
                 var RequestedSize = Multipier * RelativeSize;
