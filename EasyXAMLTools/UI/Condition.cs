@@ -10,35 +10,51 @@ namespace EasyXAMLTools;
 /// <summary>
 /// Creates a Condition Element, to aply template on True or False
 /// </summary>
-public partial class Condition : ContentControl, INotifyPropertyChanged
+[DependencyProperty(
+    typeof(bool),
+    "Value",
+    GenerateLocalOnPropertyChangedMethod = true,
+    LocalOnPropertyChangedMethodName = "UpdateTemplate",
+    LocalOnPropertyChangedMethodWithParameter = false,
+    Documentation =
+    """
+    /// <summary>
+    /// Gets or Set the Value of the condition and update the template
+    /// </summary>
+    """
+)]
+[DependencyProperty(
+    typeof(DataTemplate),
+    "OnTrue",
+    GenerateLocalOnPropertyChangedMethod = true,
+    LocalOnPropertyChangedMethodName = "UpdateTemplate",
+    LocalOnPropertyChangedMethodWithParameter = false,
+    Documentation =
+    """
+    /// <summary>
+    /// Gets or Set the <see cref="DataTemplate"/> to use when <see cref="Value"/> is true.
+    /// </summary>
+    """
+)]
+[DependencyProperty(
+    typeof(DataTemplate),
+    "OnFalse",
+    GenerateLocalOnPropertyChangedMethod = true,
+    LocalOnPropertyChangedMethodName = "UpdateTemplate",
+    LocalOnPropertyChangedMethodWithParameter = false,
+    Documentation =
+    """
+    /// <summary>
+    /// Gets or Set the <see cref="DataTemplate"/> to use when <see cref="Value"/> is false.
+    /// </summary>
+    """
+)]
+public partial class Condition : ContentControl
 {
-    /// <summary>
-    /// Set Value of the condition and update the template
-    /// </summary>
-    [AutoNotifyProperty(OnChanged = nameof(UpdateTemplate))]
-    bool _Value = false;
-
-    /// <summary>
-    /// The <see cref="DataTemplate"/> to use when <see cref="Value"/> is true.
-    /// </summary>
-    
-    [AutoNotifyProperty(OnChanged = nameof(UpdateTemplate))]
-    DataTemplate? _OnTrue;
-    
-    /// <summary>
-    /// The <see cref="DataTemplate"/> to use when <see cref="Value"/> is false.
-    /// </summary>
-    [AutoNotifyProperty(OnChanged = nameof(UpdateTemplate))]
-    DataTemplate? _OnFalse;
-
-    public event PropertyChangedEventHandler? PropertyChanged;
-
     void UpdateTemplate()
     {
-        var NewTempalte = _Value ? _OnTrue : _OnFalse;
+        var NewTempalte = Value ? OnTrue : OnFalse;
         if (ContentTemplate != NewTempalte)
             ContentTemplate = NewTempalte;
     }
-
-
 }

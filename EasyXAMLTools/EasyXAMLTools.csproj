@@ -7,6 +7,7 @@
 		<UseWinUI>true</UseWinUI>
 		<EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
 		<GenerateLibraryLayout>true</GenerateLibraryLayout>
+		<LangVersion>preview</LangVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -20,5 +21,6 @@
 	<ItemGroup>
 		<ProjectReference Include="..\EasyCSharp\EasyCSharp\EasyCSharp.csproj" />
 		<ProjectReference Include="..\EasyCSharp\EasyCSharp.Generator\EasyCSharp.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+		<ProjectReference Include="..\EasyXAMLTools.Generator\EasyXAMLTools.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
 	</ItemGroup>
 </Project>
