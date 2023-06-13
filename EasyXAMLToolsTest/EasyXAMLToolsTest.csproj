@@ -41,8 +41,8 @@
 	<ItemGroup>
 		<ProjectReference Include="..\..\EasyCSharp\EasyCSharp.Types\EasyCSharp.csproj" />
 		<ProjectReference Include="..\..\EasyCSharp\EasyCSharp\EasyCSharp.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
-		<ProjectReference Include="..\EasyXAMLTools.Generator\EasyXAMLTools.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
-		<ProjectReference Include="..\EasyXAMLTools\EasyXAMLTools.csproj" />
+		<ProjectReference Include="..\EasyXAMLTools.Generator\Get.EasyXAMLTools.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+		<ProjectReference Include="..\EasyXAMLTools\Get.EasyXAMLTools.csproj" />
 	</ItemGroup>
 
 	<!-- 
